@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Math RPG: Roblox Adventure</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=ZCOOL+KuaiLe&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'ZCOOL KuaiLe', 'Microsoft YaHei', cursive;
+        background-color: #2d3748;
+        touch-action: manipulation;
+        user-select: none;
+        overflow: hidden; /* Prevent pull-to-refresh on mobile */
+      }
+      
+      .pixel-font {
+        font-family: 'Press Start 2P', cursive;
+      }
+
+      .dungeon-bg {
+        background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+        box-shadow: inset 0 0 50px rgba(0,0,0,0.5);
+      }
+
+      .pixel-btn {
+        box-shadow: inset 2px 2px 0px 0px #ffffff66, inset -2px -2px 0px 0px #00000066, 4px 4px 0px 0px #00000033;
+        transition: transform 0.1s;
+      }
+      .pixel-btn:active {
+        transform: translate(2px, 2px);
+        box-shadow: none;
+      }
+
+      @keyframes float-up {
+        0% { transform: translateY(0) scale(1); opacity: 1; }
+        100% { transform: translateY(-50px) scale(1.5); opacity: 0; }
+      }
+      
+      .animate-float-up {
+        animation: float-up 0.8s ease-out forwards;
+      }
+
+      @keyframes pop-in {
+        0% { transform: scale(0); opacity: 0; }
+        50% { transform: scale(1.2); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+      }
+      
+      .animate-pop-in {
+        animation: pop-in 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+      }
+      
+      .roblox-head {
+        border: 3px solid rgba(0,0,0,0.2);
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/"
+  }
+}
+</script>
+</head>
+  <body class="text-white h-screen w-screen overflow-hidden">
+    <div id="root" class="w-full h-full"></div>
+  </body>
+</html>
